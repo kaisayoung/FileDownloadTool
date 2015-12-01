@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3037E0601BFEBDB400E71489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E05F1BFEBDB400E71489 /* main.m */; };
+		3037E0631BFEBDB400E71489 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0621BFEBDB400E71489 /* AppDelegate.m */; };
+		3037E0661BFEBDB400E71489 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0651BFEBDB400E71489 /* ViewController.m */; };
+		3037E0691BFEBDB400E71489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0671BFEBDB400E71489 /* Main.storyboard */; };
+		3037E06B1BFEBDB400E71489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3037E06A1BFEBDB400E71489 /* Assets.xcassets */; };
+		3037E06E1BFEBDB400E71489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3037E06C1BFEBDB400E71489 /* LaunchScreen.storyboard */; };
+		3037E09F1BFEC82C00E71489 /* SCFileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E09E1BFEC82C00E71489 /* SCFileDownloadManager.m */; };
+		3037E0A41BFECBE200E71489 /* SCFileDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0A31BFECBE200E71489 /* SCFileDownload.m */; };
+		3037E0BF1C03023700E71489 /* DownloadDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0BD1C03023700E71489 /* DownloadDemoViewController.m */; };
+		3037E0C01C03023700E71489 /* DownloadDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0BE1C03023700E71489 /* DownloadDemoViewController.xib */; };
+		3037E0C91C03038A00E71489 /* image_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C21C03038A00E71489 /* image_placeholder@2x.png */; };
+		3037E0CA1C03038A00E71489 /* off_line_download_fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C31C03038A00E71489 /* off_line_download_fail@2x.png */; };
+		3037E0CB1C03038A00E71489 /* off_line_waiting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C41C03038A00E71489 /* off_line_waiting@2x.png */; };
+		3037E0CC1C03038A00E71489 /* off_line_pausing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C51C03038A00E71489 /* off_line_pausing@2x.png */; };
+		3037E0CD1C03038A00E71489 /* off_line_downloading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C61C03038A00E71489 /* off_line_downloading@2x.png */; };
+		3037E0CE1C03038A00E71489 /* nav_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C71C03038A00E71489 /* nav_back_btn@2x.png */; };
+		3037E0CF1C03038A00E71489 /* nav_back_btn_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0C81C03038A00E71489 /* nav_back_btn_hl@2x.png */; };
+		3037E0D31C03045300E71489 /* DownloadDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0D11C03045300E71489 /* DownloadDemoCell.m */; };
+		3037E0D41C03045300E71489 /* DownloadDemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3037E0D21C03045300E71489 /* DownloadDemoCell.xib */; };
+		3037E0D71C0307F600E71489 /* FileDemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0D61C0307F600E71489 /* FileDemoModel.m */; };
+		3037E0DC1C0332AA00E71489 /* DownloadDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037E0DB1C0332AA00E71489 /* DownloadDemoObject.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3037E05B1BFEBDB400E71489 /* FileDownloadTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileDownloadTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3037E05F1BFEBDB400E71489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3037E0611BFEBDB400E71489 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3037E0621BFEBDB400E71489 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3037E0641BFEBDB400E71489 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3037E0651BFEBDB400E71489 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3037E0681BFEBDB400E71489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3037E06A1BFEBDB400E71489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3037E06D1BFEBDB400E71489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3037E06F1BFEBDB400E71489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3037E09D1BFEC82C00E71489 /* SCFileDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFileDownloadManager.h; sourceTree = "<group>"; };
+		3037E09E1BFEC82C00E71489 /* SCFileDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFileDownloadManager.m; sourceTree = "<group>"; };
+		3037E0A21BFECBE200E71489 /* SCFileDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFileDownload.h; sourceTree = "<group>"; };
+		3037E0A31BFECBE200E71489 /* SCFileDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFileDownload.m; sourceTree = "<group>"; };
+		3037E0BC1C03023700E71489 /* DownloadDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDemoViewController.h; sourceTree = "<group>"; };
+		3037E0BD1C03023700E71489 /* DownloadDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDemoViewController.m; sourceTree = "<group>"; };
+		3037E0BE1C03023700E71489 /* DownloadDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadDemoViewController.xib; sourceTree = "<group>"; };
+		3037E0C21C03038A00E71489 /* image_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image_placeholder@2x.png"; path = "Images/image_placeholder@2x.png"; sourceTree = "<group>"; };
+		3037E0C31C03038A00E71489 /* off_line_download_fail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "off_line_download_fail@2x.png"; path = "Images/off_line_download_fail@2x.png"; sourceTree = "<group>"; };
+		3037E0C41C03038A00E71489 /* off_line_waiting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "off_line_waiting@2x.png"; path = "Images/off_line_waiting@2x.png"; sourceTree = "<group>"; };
+		3037E0C51C03038A00E71489 /* off_line_pausing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "off_line_pausing@2x.png"; path = "Images/off_line_pausing@2x.png"; sourceTree = "<group>"; };
+		3037E0C61C03038A00E71489 /* off_line_downloading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "off_line_downloading@2x.png"; path = "Images/off_line_downloading@2x.png"; sourceTree = "<group>"; };
+		3037E0C71C03038A00E71489 /* nav_back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nav_back_btn@2x.png"; path = "Images/nav_back_btn@2x.png"; sourceTree = "<group>"; };
+		3037E0C81C03038A00E71489 /* nav_back_btn_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nav_back_btn_hl@2x.png"; path = "Images/nav_back_btn_hl@2x.png"; sourceTree = "<group>"; };
+		3037E0D01C03045300E71489 /* DownloadDemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDemoCell.h; sourceTree = "<group>"; };
+		3037E0D11C03045300E71489 /* DownloadDemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDemoCell.m; sourceTree = "<group>"; };
+		3037E0D21C03045300E71489 /* DownloadDemoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadDemoCell.xib; sourceTree = "<group>"; };
+		3037E0D51C0307F600E71489 /* FileDemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDemoModel.h; sourceTree = "<group>"; };
+		3037E0D61C0307F600E71489 /* FileDemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDemoModel.m; sourceTree = "<group>"; };
+		3037E0DA1C0332AA00E71489 /* DownloadDemoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDemoObject.h; sourceTree = "<group>"; };
+		3037E0DB1C0332AA00E71489 /* DownloadDemoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDemoObject.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3037E0581BFEBDB400E71489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3037E0521BFEBDB400E71489 = {
+			isa = PBXGroup;
+			children = (
+				3037E05D1BFEBDB400E71489 /* FileDownloadTool */,
+				3037E05C1BFEBDB400E71489 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3037E05C1BFEBDB400E71489 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3037E05B1BFEBDB400E71489 /* FileDownloadTool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3037E05D1BFEBDB400E71489 /* FileDownloadTool */ = {
+			isa = PBXGroup;
+			children = (
+				3037E0611BFEBDB400E71489 /* AppDelegate.h */,
+				3037E0621BFEBDB400E71489 /* AppDelegate.m */,
+				3037E0641BFEBDB400E71489 /* ViewController.h */,
+				3037E0651BFEBDB400E71489 /* ViewController.m */,
+				3037E0671BFEBDB400E71489 /* Main.storyboard */,
+				3037E06A1BFEBDB400E71489 /* Assets.xcassets */,
+				3037E06C1BFEBDB400E71489 /* LaunchScreen.storyboard */,
+				3037E06F1BFEBDB400E71489 /* Info.plist */,
+				3037E0A51C02EE4000E71489 /* UseDemo */,
+				3037E09A1BFEC5D800E71489 /* FileDownload */,
+				3037E05E1BFEBDB400E71489 /* Supporting Files */,
+			);
+			path = FileDownloadTool;
+			sourceTree = "<group>";
+		};
+		3037E05E1BFEBDB400E71489 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3037E05F1BFEBDB400E71489 /* main.m */,
+				3037E0C11C03037500E71489 /* Images */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3037E09A1BFEC5D800E71489 /* FileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				3037E0A21BFECBE200E71489 /* SCFileDownload.h */,
+				3037E0A31BFECBE200E71489 /* SCFileDownload.m */,
+				3037E09D1BFEC82C00E71489 /* SCFileDownloadManager.h */,
+				3037E09E1BFEC82C00E71489 /* SCFileDownloadManager.m */,
+			);
+			name = FileDownload;
+			sourceTree = "<group>";
+		};
+		3037E0A51C02EE4000E71489 /* UseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3037E0D51C0307F600E71489 /* FileDemoModel.h */,
+				3037E0D61C0307F600E71489 /* FileDemoModel.m */,
+				3037E0DA1C0332AA00E71489 /* DownloadDemoObject.h */,
+				3037E0DB1C0332AA00E71489 /* DownloadDemoObject.m */,
+				3037E0D01C03045300E71489 /* DownloadDemoCell.h */,
+				3037E0D11C03045300E71489 /* DownloadDemoCell.m */,
+				3037E0D21C03045300E71489 /* DownloadDemoCell.xib */,
+				3037E0BC1C03023700E71489 /* DownloadDemoViewController.h */,
+				3037E0BD1C03023700E71489 /* DownloadDemoViewController.m */,
+				3037E0BE1C03023700E71489 /* DownloadDemoViewController.xib */,
+			);
+			name = UseDemo;
+			sourceTree = "<group>";
+		};
+		3037E0C11C03037500E71489 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3037E0C21C03038A00E71489 /* image_placeholder@2x.png */,
+				3037E0C31C03038A00E71489 /* off_line_download_fail@2x.png */,
+				3037E0C41C03038A00E71489 /* off_line_waiting@2x.png */,
+				3037E0C51C03038A00E71489 /* off_line_pausing@2x.png */,
+				3037E0C61C03038A00E71489 /* off_line_downloading@2x.png */,
+				3037E0C71C03038A00E71489 /* nav_back_btn@2x.png */,
+				3037E0C81C03038A00E71489 /* nav_back_btn_hl@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3037E05A1BFEBDB400E71489 /* FileDownloadTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3037E0881BFEBDB400E71489 /* Build configuration list for PBXNativeTarget "FileDownloadTool" */;
+			buildPhases = (
+				3037E0571BFEBDB400E71489 /* Sources */,
+				3037E0581BFEBDB400E71489 /* Frameworks */,
+				3037E0591BFEBDB400E71489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileDownloadTool;
+			productName = FileDownloadTool;
+			productReference = 3037E05B1BFEBDB400E71489 /* FileDownloadTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3037E0531BFEBDB400E71489 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "王琦";
+				TargetAttributes = {
+					3037E05A1BFEBDB400E71489 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 3037E0561BFEBDB400E71489 /* Build configuration list for PBXProject "FileDownloadTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3037E0521BFEBDB400E71489;
+			productRefGroup = 3037E05C1BFEBDB400E71489 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3037E05A1BFEBDB400E71489 /* FileDownloadTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3037E0591BFEBDB400E71489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3037E0CB1C03038A00E71489 /* off_line_waiting@2x.png in Resources */,
+				3037E0D41C03045300E71489 /* DownloadDemoCell.xib in Resources */,
+				3037E0C01C03023700E71489 /* DownloadDemoViewController.xib in Resources */,
+				3037E0CC1C03038A00E71489 /* off_line_pausing@2x.png in Resources */,
+				3037E06E1BFEBDB400E71489 /* LaunchScreen.storyboard in Resources */,
+				3037E0CA1C03038A00E71489 /* off_line_download_fail@2x.png in Resources */,
+				3037E06B1BFEBDB400E71489 /* Assets.xcassets in Resources */,
+				3037E0C91C03038A00E71489 /* image_placeholder@2x.png in Resources */,
+				3037E0CE1C03038A00E71489 /* nav_back_btn@2x.png in Resources */,
+				3037E0CD1C03038A00E71489 /* off_line_downloading@2x.png in Resources */,
+				3037E0CF1C03038A00E71489 /* nav_back_btn_hl@2x.png in Resources */,
+				3037E0691BFEBDB400E71489 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3037E0571BFEBDB400E71489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3037E0D31C03045300E71489 /* DownloadDemoCell.m in Sources */,
+				3037E0D71C0307F600E71489 /* FileDemoModel.m in Sources */,
+				3037E0661BFEBDB400E71489 /* ViewController.m in Sources */,
+				3037E09F1BFEC82C00E71489 /* SCFileDownloadManager.m in Sources */,
+				3037E0BF1C03023700E71489 /* DownloadDemoViewController.m in Sources */,
+				3037E0631BFEBDB400E71489 /* AppDelegate.m in Sources */,
+				3037E0DC1C0332AA00E71489 /* DownloadDemoObject.m in Sources */,
+				3037E0601BFEBDB400E71489 /* main.m in Sources */,
+				3037E0A41BFECBE200E71489 /* SCFileDownload.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3037E0671BFEBDB400E71489 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3037E0681BFEBDB400E71489 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3037E06C1BFEBDB400E71489 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3037E06D1BFEBDB400E71489 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3037E0861BFEBDB400E71489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3037E0871BFEBDB400E71489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3037E0891BFEBDB400E71489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = FileDownloadTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanwan.FileDownloadTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3037E08A1BFEBDB400E71489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = FileDownloadTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanwan.FileDownloadTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3037E0561BFEBDB400E71489 /* Build configuration list for PBXProject "FileDownloadTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3037E0861BFEBDB400E71489 /* Debug */,
+				3037E0871BFEBDB400E71489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3037E0881BFEBDB400E71489 /* Build configuration list for PBXNativeTarget "FileDownloadTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3037E0891BFEBDB400E71489 /* Debug */,
+				3037E08A1BFEBDB400E71489 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3037E0531BFEBDB400E71489 /* Project object */;
+}
