@@ -49,14 +49,14 @@ typedef NS_ENUM(NSInteger, FileDownloadState){
 
 + (instancetype)sharedFileDownloadManager;
 
-@property (assign, nonatomic) NSInteger maxDownloadCount;                //当前队列最大同时下载数，默认值是1
+@property (assign, nonatomic) NSInteger maxConDownloadCount;             //当前队列最大同时下载数，默认值是1
 @property (assign, nonatomic, readonly) NSInteger currentDownloadCount;  //当前队列中下载数，包括正在下载的和等待的
 @property (assign, nonatomic) id<SCFileDownloadManagerDelegate>delegate;
 
 //添加到下载队列
 - (void)addDownloadWithFileId:(NSString *)fileId fileUrl:(NSString *)url directoryPath:(NSString *)directoryPath fileName:(NSString *)fileName;
 
-//点击等待项（－》下载／do nothing）
+//点击等待项（－》立刻下载／do nothing）
 - (void)startDownloadWithFileId:(NSString *)fileId;
 
 //点击下载项 －》暂停

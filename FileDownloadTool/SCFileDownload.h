@@ -13,11 +13,6 @@
  实现方式有NSURLConneciton和NSURLSession两种，本类实现了第一种，第二种待续
  */
 
-typedef NS_ENUM(NSInteger, FileDownloadMethod){
-    FileDownloadMethodURLConnection = 0,
-    FileDownloadMethodURLSession = 1,
-};
-
 @class SCFileDownload;
 
 @protocol SCFileDownloadDelegate <NSObject>
@@ -35,7 +30,6 @@ typedef NS_ENUM(NSInteger, FileDownloadMethod){
 @property (copy, nonatomic) NSString *fileUrl;          //文件的网址
 @property (copy, nonatomic) NSString *fileName;         //文件的名字
 @property (copy, nonatomic) NSString *directoryPath;    //文件所在文件夹路径
-@property (assign, nonatomic) FileDownloadMethod downloadMethod;
 @property (assign, nonatomic) id<SCFileDownloadDelegate>delegate;
 
 - (id)initWithURL:(NSString *)fileUrl directoryPath:(NSString *)directoryPath fileName:(NSString *)fileName delegate:(id<SCFileDownloadDelegate>)delegate;

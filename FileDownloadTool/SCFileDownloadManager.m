@@ -19,8 +19,16 @@
 //默认最大同时下载数，最好不超过3
 #define  DefaultMaxDownloadCount    1
 
-//点击等待状态，暂停状态时响应方法：通常来说有两种情况，1种是点击立即去下载；另1种是点击等待中项无响应（因为已经存在于下载队列，只是还没排上队），点击暂停中项重新添加到下载队列。可在1和0之间切换
-#define  RESPONSE_TO_CLICK_WAY      1
+/*
+ 点击等待状态时响应方法，通常来说有三种：1种是立即去下载；另1种是无响应；第三种是暂停（因为已经存在于下载队列，只是还没排上队）
+ 点击暂停状态时响应方法，通常来说有两种：1种是立即去下载；另1种是仅添加到下载队列。
+ 可在1和0之间切换如下值体验不同方式
+*/
+
+#define  RESPONSE_TO_WAITING_WAY_ONE      1
+#define  RESPONSE_TO_WAITING_WAY_TWO      0
+#define  RESPONSE_TO_SUSPEND_WAY          1
+
 
 @interface SCFileDownloadManager ()<SCFileDownloadDelegate>
 
@@ -62,16 +70,29 @@
 
 - (void)startDownloadWithFileId:(NSString *)fileId
 {
-    if(RESPONSE_TO_CLICK_WAY){
-        return;
-    }
     if(self.currentDownloadCount==0){
         return;
     }
-    NSInteger currentDownloadCount = self.currentDownloadCount;
+    //do nothing
+    if(RESPONSE_TO_WAITING_WAY_ONE){
+        return;
+    }
+    //去暂停
+    if(RESPONSE_TO_WAITING_WAY_TWO){
+        for(NSInteger i=self.maxConDownloadCount;i<self.currentDownloadCount;i++){
+            SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
+            if([fileDownload.fileId isEqualToString:fileId]){
+                [fileDownload cancel];
+                [_suspendDownloadArr addObject:fileDownload];
+                break;
+            }
+        }
+        return;
+    }
+    //立即去下载
     NSMutableArray *tmpCancelArray = [NSMutableArray array];
     SCFileDownload *chooseDownload = nil;
-    for(NSInteger i=self.maxDownloadCount;i<currentDownloadCount;i++){
+    for(NSInteger i=self.maxConDownloadCount;i<self.currentDownloadCount;i++){
         SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
         [fileDownload cancel];
         if([fileDownload.fileId isEqualToString:fileId]){
@@ -81,7 +102,7 @@
            [tmpCancelArray addObject:fileDownload];
         }
     }
-    SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:self.maxDownloadCount-1];
+    SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:self.maxConDownloadCount-1];
     [fileDownload cancelDownloadIfDeleteFile:NO];
     [self addToDownloadWithFileDownload:chooseDownload];
     [self addToDownloadWithFileDownload:fileDownload];
@@ -103,22 +124,23 @@
 
 - (void)recoverDownloadWithFileId:(NSString *)fileId
 {
-    if(RESPONSE_TO_CLICK_WAY){
+    //添加到下载队列
+    if(RESPONSE_TO_SUSPEND_WAY){
         [self addToDownloadInSuspendArrayWithFileId:fileId];
         return;
     }
+    //立即去下载
     if([self canAddOperationWithoutCancel]){
         [self addToDownloadInSuspendArrayWithFileId:fileId];
     }
     else if([self hasWaitingOperations]){
-        NSInteger currentDownloadCount = self.currentDownloadCount;
         NSMutableArray *tmpCancelArray = [NSMutableArray array];
-        for(NSInteger i=self.maxDownloadCount;i<currentDownloadCount;i++){
+        for(NSInteger i=self.maxConDownloadCount;i<self.currentDownloadCount;i++){
             SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
             [fileDownload cancel];
             [tmpCancelArray addObject:fileDownload];
         }
-        SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:self.maxDownloadCount-1];
+        SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:self.maxConDownloadCount-1];
         [fileDownload cancelDownloadIfDeleteFile:NO];
         [self addToDownloadInSuspendArrayWithFileId:fileId];
         [self addToDownloadWithFileDownload:fileDownload];
@@ -161,15 +183,14 @@
 {
     //需要区分是正在执行的还是等待的，先把排队中的cancel掉，再把正在执行的finish掉
     if([self hasWaitingOperations]){
-        NSInteger currentDownloadCount = self.currentDownloadCount;
         NSMutableArray *tmpCancelArray = [NSMutableArray array];
-        for(NSInteger i=self.maxDownloadCount;i<currentDownloadCount;i++){
+        for(NSInteger i=self.maxConDownloadCount;i<self.currentDownloadCount;i++){
             SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
             [fileDownload cancel];
             [_suspendDownloadArr addObject:fileDownload];
         }
         NSMutableArray *downloadingCancelArray = [NSMutableArray array];
-        for(NSInteger i=0;i<self.maxDownloadCount;i++){
+        for(NSInteger i=0;i<self.maxConDownloadCount;i++){
             SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
             [downloadingCancelArray addObject:fileDownload];
         }
@@ -200,15 +221,14 @@
 {
     //先把排队的取消掉，再把正在下载的取消掉
     if([self hasWaitingOperations]){
-        NSInteger currentDownloadCount = self.currentDownloadCount;
-        for(NSInteger i=self.maxDownloadCount;i<currentDownloadCount;i++){
+        for(NSInteger i=self.maxConDownloadCount;i<self.currentDownloadCount;i++){
             SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
             NSString *filePath = [self tmpFilePathWithDirectoryPath:fileDownload.directoryPath fileName:fileDownload.fileName];
             [fileDownload cancel];
             [self removeTmpFileWithPath:filePath];
         }
         NSMutableArray *downloadingCancelArray = [NSMutableArray array];
-        for(NSInteger i=0;i<self.maxDownloadCount;i++){
+        for(NSInteger i=0;i<self.maxConDownloadCount;i++){
             SCFileDownload *fileDownload = [_downloadQueue.operations objectAtIndex:i];
             [downloadingCancelArray addObject:fileDownload];
         }
@@ -252,7 +272,7 @@
         }
     }
     
-    if(findCount==1 && findIndex<self.maxDownloadCount){
+    if(findCount==1 && findIndex<self.maxConDownloadCount){
         return FileDownloadStateDownloading;
     }
     
@@ -263,12 +283,12 @@
 
 - (BOOL)hasWaitingOperations
 {
-    return self.currentDownloadCount>self.maxDownloadCount;
+    return self.currentDownloadCount>self.maxConDownloadCount;
 }
 
 - (BOOL)canAddOperationWithoutCancel
 {
-    return self.maxDownloadCount>self.currentDownloadCount;
+    return self.maxConDownloadCount>self.currentDownloadCount;
 }
 
 - (NSString *)tmpFilePathWithDirectoryPath:(NSString *)directoryPath fileName:(NSString *)fileName
@@ -304,12 +324,12 @@
 
 #pragma mark --- Set & Get ---
 
-- (void)setMaxDownloadCount:(NSInteger)maxDownloadCount
+- (void)setMaxConDownloadCount:(NSInteger)maxConDownloadCount
 {
-    _downloadQueue.maxConcurrentOperationCount = maxDownloadCount;
+    _downloadQueue.maxConcurrentOperationCount = maxConDownloadCount;
 }
 
-- (NSInteger)maxDownloadCount
+- (NSInteger)maxConDownloadCount
 {
     return _downloadQueue.maxConcurrentOperationCount;
 }
